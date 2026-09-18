@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB Clone</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            fb-clone
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search Facebook">
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+
+            <h3>Menu</h3>
+
+            <p>👤 Profile</p>
+            <p>👥 Friends</p>
+            <p>💬 Messages</p>
+            <p>🔔 Notifications</p>
+            <p>📷 Photos</p>
+            <p>⚙️ Settings</p>
+
+        </aside>
+
+
+        <!-- Feed -->
+        <section class="feed">
+
+            <!-- Create Post -->
+            <div class="card create-post">
+
+                <h3>Create Post</h3>
+
+                <textarea
+                    id="postInput"
+                    placeholder="What's on your mind?"
+                ></textarea>
+
+                <button onclick="createPost()">
+                    Post
+                </button>
+
+            </div>
+
+
+            <!-- Posts -->
+            <div id="posts">
+
+                <div class="card post">
+
+                    <div class="post-header">
+                        <div class="profile-picture">
+                            S
+                        </div>
+
+                        <div>
+                            <h3>Souvik Sadhu</h3>
+                            <small>Just now</small>
+                        </div>
+                    </div>
+
+                    <p>
+                        Welcome to my Facebook Clone project! 🚀
+                    </p>
+
+                    <div class="post-actions">
+
+                        <button onclick="likePost(this)">
+                            👍 Like <span>0</span>
+                        </button>
+
+                        <button>
+                            💬 Comment
+                        </button>
+
+                        <button>
+                            ↗️ Share
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+
+            <h3>Contacts</h3>
+
+            <p>🟢 Rahul</p>
+            <p>🟢 Ankit</p>
+            <p>🟢 Sayan</p>
+            <p>🟢 Arjun</p>
+
+        </aside>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
