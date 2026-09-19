@@ -64,3 +64,94 @@ function likePost(button) {
 
     count.textContent = likes;
 }
+
+// =========================
+// Login Form
+// =========================
+
+const loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+
+    loginForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const email =
+            document.getElementById("loginEmail").value.trim();
+
+        const password =
+            document.getElementById("loginPassword").value;
+
+        if (email === "" || password === "") {
+
+            alert("Please fill in all fields.");
+
+            return;
+        }
+
+        alert("Login system will be connected to the backend soon!");
+
+    });
+}
+
+
+// =========================
+// Registration Form
+// =========================
+
+const registerForm =
+    document.getElementById("registerForm");
+
+if (registerForm) {
+
+    registerForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const firstName =
+            document.getElementById("firstName").value.trim();
+
+        const lastName =
+            document.getElementById("lastName").value.trim();
+
+        const email =
+            document.getElementById("registerEmail").value.trim();
+
+        const password =
+            document.getElementById("registerPassword").value;
+
+        const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+        if (
+            firstName === "" ||
+            lastName === "" ||
+            email === "" ||
+            password === "" ||
+            confirmPassword === ""
+        ) {
+
+            alert("Please fill in all fields.");
+
+            return;
+        }
+
+        if (password.length < 6) {
+
+            alert("Password must be at least 6 characters.");
+
+            return;
+        }
+
+        if (password !== confirmPassword) {
+
+            alert("Passwords do not match.");
+
+            return;
+        }
+
+        alert("Registration system will be connected to the backend soon!");
+
+    });
+}
