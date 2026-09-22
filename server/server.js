@@ -2,7 +2,16 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
+const connectDatabase = require("./config/database");
+
 const app = express();
+
+
+// =========================
+// Connect MongoDB
+// =========================
+
+connectDatabase();
 
 
 // =========================
@@ -44,26 +53,6 @@ app.get("/api/test", (req, res) => {
 // =========================
 
 const PORT = process.env.PORT || 5000;
-app.get("/api/users", (req, res) => {
-
-    const users = [
-        {
-            id: 1,
-            name: "Souvik Sadhu"
-        },
-        {
-            id: 2,
-            name: "Rahul"
-        },
-        {
-            id: 3,
-            name: "Ankit"
-        }
-    ];
-
-    res.json(users);
-
-});
 
 app.listen(PORT, () => {
 
